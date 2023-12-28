@@ -1,0 +1,395 @@
+.navibar
+    background-image: url(../images/header/background_ellipse.png)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    min-height: 427px
+    @media screen and (max-width: 991px)
+        min-height: 330px
+        background-position: top
+        margin-top: 30px
+    @media screen and (max-width: 768px)
+        background-image: none
+        margin: 0
+        min-height: auto
+
+.navibar-text
+    display: inline
+    font-family: fira-sans
+    font-size: 22px
+    font-weight: 600
+    margin: 0
+    @media screen and (max-width: 1199px)
+        font-size: 20px
+    @media screen and (max-width: 991px)
+        font-size: 18px
+    @media screen and (max-width: 768px)
+        font-size: 16px
+    @media screen and (max-width: 430px)
+        font-size: 14px
+    @media screen and (max-width: 352px)
+        font-size: 12px
+
+.navibar-img
+    @media screen and (max-width: 1199px)
+        width: 60px 
+        height: 60px
+    @media screen and (max-width: 991px) 
+        width: 50px 
+        height: 50px
+    @media screen and (max-width: 768px)
+        display: none
+
+.navibar-figure
+    min-width: inherit
+    min-height: inherit
+    transition: 0.4s
+
+
+// Услуги
+.services
+    min-width: 148px
+    min-height: 148px
+    position: absolute
+    top: 5%
+    right: 65%
+    cursor: pointer
+    @media screen and (max-width: 1199px)
+        min-width: 125px 
+        min-height: 125px
+    @media screen and (max-width: 991px) 
+        min-width: 110px 
+        min-height: 110px
+        top: -2%
+        right: 60%
+    @media screen and (max-width: 768px)
+        position: static
+        justify-content: center
+        align-items: center
+    @media screen and (max-width: 352px)
+        min-width: 90px
+        min-height: 90px
+
+.services:hover
+    .figure-services-o
+        transform: rotate(0deg)
+    .figure-services-r
+        transform: rotate(45deg)
+    .services-img
+        transform: scale(0.9)
+    .services-text
+        transform: scale(1.1)
+    @media screen and (max-width: 768px)
+        .figure-services-o
+            transform: rotate(90deg)
+        .figure-services-r
+            transform: rotate(-90deg)
+
+.figure-services-bck
+    position: absolute
+    left: 10%
+    top: 18%
+    background-color: #F8DBDC
+    filter: blur(50px)
+    border-radius: 70px
+    z-index: 0
+    @media screen and (max-width: 768px)
+        display: none
+
+.figure-services-r
+    position: absolute
+    background: linear-gradient(315deg, rgba(255,192,192,1), rgba(255,192,192,0))
+    border-radius: 42px
+    z-index: 1
+    @media screen and (max-width: 1199px)
+        border-radius: 36px
+    @media screen and (max-width: 991px)
+        border-radius: 32px
+    @media screen and (max-width: 768px)
+        min-width: 30px
+        min-height: 140px
+        transform: rotate(-45deg)
+        background: linear-gradient(90deg, rgba(255,192,192,1), rgba(255,192,192,0))
+    @media screen and (max-width: 430px)
+        min-width: 25px
+        min-height: 120px
+    @media screen and (max-width: 352px)
+        min-width: 15px
+        min-height: 90px   
+        
+.figure-services-o
+    transform: rotate(45deg)
+    background: linear-gradient(90deg, rgba(253,221,179,1), rgba(253,221,179,0))
+    border-radius: 42px
+    z-index: 2
+    @media screen and (max-width: 1199px)
+        border-radius: 36px
+    @media screen and (max-width: 991px)
+        border-radius: 32px
+    @media screen and (max-width: 768px)
+        position: absolute
+        min-width: 30px
+        min-height: 140px
+    @media screen and (max-width: 430px)
+        min-width: 25px
+        min-height: 120px
+    @media screen and (max-width: 352px)
+        min-width: 15px
+        min-height: 90px   
+
+
+.services-img
+    position: absolute
+    z-index: 3
+    bottom: 60%
+    transition: 0.4s
+    
+
+.services-text
+    position: absolute
+    z-index: 3
+    top: 60%
+    left: 63%
+    transition: 0.4s
+    @media screen and (max-width: 768px)
+        position: static
+   
+
+// Контакты
+.contacts
+    min-width: 116px
+    min-height: 116px
+    position: absolute
+    top: 35%
+    right: 15%
+    cursor: pointer
+    @media screen and (max-width: 1199px)
+        min-width: 110px 
+        min-height: 110px
+        left: 75%
+    @media screen and (max-width: 991px) 
+        min-width: 100px 
+        min-height: 100px
+        top: 30%
+        right: 60%
+    @media screen and (max-width: 768px)
+        position: static
+        min-width: 110px
+        min-height: 110px
+        justify-content: center
+        align-items: center
+    @media screen and (max-width: 352px)
+        min-width: 90px
+        min-height: 90px
+
+.contacts:hover
+    .figure-contacts-p
+        transform: rotate(45deg)
+    .figure-contacts-b
+        transform: rotate(0deg)
+    .contacts-img
+        transform: scale(0.9)
+    .contacts-text
+        transform: scale(1.1)
+    @media screen and (max-width: 768px)
+        .figure-contacts-p
+            transform: rotate(-90deg)
+        .figure-contacts-b
+            transform: rotate(90deg)
+
+.figure-contacts-bck
+    position: absolute
+    right: 20%
+    top: 8%
+    background-color: #C0B9F6
+    filter: blur(50px)
+    border-radius: 70px
+    z-index: 0
+    @media screen and (max-width: 768px)
+        display: none
+
+.figure-contacts-p
+    position: absolute
+    background: linear-gradient(315deg, rgba(156,142,244,1), rgba(255,192,192,0))
+    border-radius: 42px
+    z-index: 1
+    @media screen and (max-width: 1199px)
+        border-radius: 36px
+    @media screen and (max-width: 991px)
+        border-radius: 32px
+    @media screen and (max-width: 768px)
+        min-width: 30px
+        min-height: 140px
+        transform: rotate(-45deg)
+        background: linear-gradient(90deg, rgba(156,142,244,1), rgba(255,192,192,0))
+    @media screen and (max-width: 430px)
+        min-width: 25px
+        min-height: 120px
+    @media screen and (max-width: 352px)
+        min-width: 15px
+        min-height: 90px   
+
+.figure-contacts-b
+    transform: rotate(45deg)
+    min-width: inherit
+    background: linear-gradient(90deg, rgba(142,169,244,1), rgba(253,221,179,0))
+    border-radius: 42px
+    z-index: 2
+    @media screen and (max-width: 1199px)
+        border-radius: 36px
+    @media screen and (max-width: 991px)
+        border-radius: 32px
+    @media screen and (max-width: 768px)
+        position: absolute
+        min-width: 30px
+        min-height: 140px
+    @media screen and (max-width: 430px)
+        min-width: 25px
+        min-height: 120px
+    @media screen and (max-width: 352px)
+        min-width: 15px
+        min-height: 90px   
+
+.contacts-img
+    position: absolute
+    z-index: 3
+    bottom: 70%
+    left: 40%
+    transition: 0.4s
+
+.contacts-text
+    position: absolute
+    z-index: 3
+    top: 60%
+    right: 30%
+    transition: 0.4s
+    @media screen and (max-width: 768px)
+        position: static
+    // @media screen and (max-width: 430px)
+    //     top: 17%
+      
+    
+
+// О нас
+.about
+    min-width: 118px
+    min-height: 114px
+    position: absolute
+    top: 70%
+    right: 60%
+    cursor: pointer
+    @media screen and (max-width: 1199px)
+        min-width: 105px 
+        min-height: 105px
+        top: 70%
+        right: 70%
+    @media screen and (max-width: 991px) 
+        min-width: 90px 
+        min-height: 90px
+        top: 63%
+        right: 65%
+    @media screen and (max-width: 768px)
+        position: static
+        min-width: 110px
+        min-height: 110px
+        justify-content: center
+        align-items: center
+    @media screen and (max-width: 352px)
+        min-width: 90px
+        min-height: 90px
+
+.about:hover
+    .figure-about-m
+        transform: rotate(45deg)
+    .figure-about-g
+        transform: rotate(0deg)
+    .about-img
+        transform: scale(0.9)
+    .about-text
+        transform: scale(1.1)
+    @media screen and (max-width: 768px)
+        .figure-about-m
+            transform: rotate(-90deg)
+        .figure-about-g
+            transform: rotate(90deg)
+
+.figure-about-bck
+    position: absolute
+    left: 8%
+    bottom: 15%
+    background-color: #AEFFD3
+    filter: blur(50px)
+    border-radius: 70px
+    z-index: 0
+    @media screen and (max-width: 768px)
+        display: none
+
+.figure-about-m
+    position: absolute
+    background: linear-gradient(315deg, rgba(163,255,205,1), rgba(255,192,192,0))
+    border-radius: 42px
+    z-index: 1
+    @media screen and (max-width: 1199px)
+        border-radius: 36px
+    @media screen and (max-width: 991px)
+        border-radius: 32px
+    @media screen and (max-width: 768px)
+        min-width: 30px
+        min-height: 140px
+        transform: rotate(-45deg)
+        background: linear-gradient(90deg, rgba(163,255,205,1), rgba(255,192,192,0))
+    @media screen and (max-width: 430px)
+        min-width: 25px
+        min-height: 120px
+    @media screen and (max-width: 352px)
+        min-width: 15px
+        min-height: 90px   
+
+.figure-about-g
+    transform: rotate(45deg)
+    min-width: inherit
+    background: linear-gradient(90deg, rgba(198,255,163,1), rgba(253,221,179,0))
+    border-radius: 42px
+    z-index: 2
+    @media screen and (max-width: 1199px)
+        border-radius: 36px
+    @media screen and (max-width: 991px)
+        border-radius: 32px
+    @media screen and (max-width: 768px)
+        position: absolute
+        min-width: 30px
+        min-height: 140px
+    @media screen and (max-width: 430px)
+        min-width: 25px
+        min-height: 120px
+    @media screen and (max-width: 352px)
+        min-width: 15px
+        min-height: 90px   
+
+.about-img
+    position: absolute
+    z-index: 3
+    top: 40%
+    right: 60%
+    transition: 0.4s
+
+.about-text
+    position: absolute
+    z-index: 3
+    bottom: 85%
+    left: 44%
+    transition: 0.4s
+    width: max-content
+    height: max-content
+    @media screen and (max-width: 768px)
+        position: static
+    // @media screen and (max-width: 430px)
+    //     top: 17%
+    // @media screen and (max-width: 320px)
+    //     left: 80%    
+    
+
+
+// .warranties
+//     min-width: 323px
+//     min-height: 376px    
