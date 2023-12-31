@@ -1,7 +1,6 @@
 import React from "react";
 import Row from "react-bootstrap/Row";
 import Column from "react-bootstrap/Col";
-import Stack from "react-bootstrap/Stack";
 import Image from "react-bootstrap/Image";
 import medal from "../../images/main/medal.svg";
 import medal_bck from "../../images/main/medal_bck.svg";
@@ -9,6 +8,7 @@ import star from "../../images/main/star.svg";
 import star_bck from "../../images/main/star_bck.svg";
 import rush from "../../images/main/rush.svg";
 import rush_bck from "../../images/main/rush_bck.svg";
+
 
 const Preview = () => {
   return (
@@ -40,7 +40,7 @@ const Preview = () => {
             </Column>
           </Row>
           <Column xs={8} md={12}>
-            <p className="preview-text">
+            <p className="wrnt-txt preview-text">
               Наша клининговая компания гарантирует высочайшее качество
               предоставляемых услуг. Мы работаем только с опытными и обученными
               сотрудниками, используем современное оборудование и проверенные
@@ -76,7 +76,7 @@ const Preview = () => {
             </Column>
           </Row>
           <Column xs={8} md={12}>
-            <p className="preview-text">
+            <p className="empl-txt preview-text">
               Сотрудники - профессионалы в работе с поверхностями. Эффективное
               удаление пятен и загрязнений. Профессиональные услуги для
               клиентов.
@@ -111,7 +111,7 @@ const Preview = () => {
             </Column>
           </Row>
           <Column xs={8} md={12}>
-            <p className="preview-text">
+            <p className="fst-txt preview-text">
               Наши клининговые услуги быстро и надежно решат все проблемы с
               чистотой. Мы предлагаем широкий спектр услуг - уборка квартир,
               офисов и после ремонта. Быстрая работа, идеальная чистота.

@@ -1,13 +1,14 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Row from "react-bootstrap/Row";
 import Preview from "../Preview/Preview";
+import About from "../About/About";
 
 const Main = () => {
   return (
     <main>
       <Container>
-          <Preview />
+        <Preview />
+        <About />
       </Container>
     </main>
   );
