@@ -6,20 +6,20 @@ const About = () => {
   return (
     <Row className="main-about">
       <Column>
-        <Row className="row-cols-md-1 about-container">
-          <Column className="ms-sm-5">
-            <h2 className="about-title">
+        <Row className="row-cols-md-1 about-container justify-content-center">
+          <Column xs={10}>
+            <h2 className="about-title ms-me">
               О нашей <br /> компании
             </h2>
           </Column>
-          <Column md={5}>
+          <Column xs={10} md={5}>
             <p className="about-title-text txt-1">
               Мы - команда профессионалов, специализирующихся на качественных
               клининговых услугах для дома и офиса. Мы обеспечиваем чистоту и
               уют, разгружая вас от забот о порядке в вашем пространстве.
             </p>
           </Column>
-          <Column md={5} className="offset-md-1">
+          <Column xs={10} md={5} className="offset-md-1">
             <p className="about-title-text txt-2">
               Мы предоставляем широкий спектр услуг: Уборка домов и квартир:
               опытные клинеры, экологически чистые средства. Офисная уборка:
@@ -28,7 +28,7 @@ const About = () => {
               визуальное впечатление и чистоту.
             </p>
           </Column>
-          <Column md={5} className="offset-md-1">
+          <Column xs={10} md={5}>
             <p className="about-title-text txt-3">
               Мы гордимся своими высокими стандартами и стремимся к постоянному
               совершенствованию наших услуг. Все наши сотрудники проходят
