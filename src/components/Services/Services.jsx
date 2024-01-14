@@ -1,7 +1,8 @@
 import { React, useState } from "react";
 import Image from "react-bootstrap/Image";
 import question from "../../images/main/question.svg";
-import DropdownBtn from "../Heandlers/DropdownBtn";
+import DropdownBtn from "../heandlers/DropdownBtn";
+import Slider from "../Slider/Slider"
 
 const Services = () => {
   return (
@@ -14,7 +15,9 @@ const Services = () => {
           <div className="card-title">
             <h3>Уборка офиса</h3>
           </div>
-          <div className="card-main">
+          <Slider />
+          <DropdownBtn />
+          {/* <div className="card-main">
             <div className="card-main-line">
               <p>Ежедневная уборка офиса до 500м2</p>
               <p>70 руб/м2</p>
@@ -27,9 +30,8 @@ const Services = () => {
               <p>Ежедневная уборка офиса от 1000м2</p>
               <p>45 руб/м2</p>
             </div>
-          </div>
-          <>
-            <div
+          </div> */}
+            {/* <div
               id="office-dropdown"
               className="services-container office-drop"
             >
@@ -41,9 +43,7 @@ const Services = () => {
                 <p>Ежедневная уборка офиса от 1000м2</p>
                 <p>45 руб/м2</p>
               </div>
-            </div>
-          </>
-          <DropdownBtn/>
+            </div> */}
         </div>
         <div className="services-card">
           <Image className="question" src={question} />
