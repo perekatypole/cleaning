@@ -27,24 +27,18 @@ const Slider = function ({ width, height, type }) {
     }
   }, []);
 
+  const changeSlide = () => {
+    let slideNumber = 0;
 
-  const changeSlide = (direction = 1) => {
-    const nextSlide = (slide + direction + items.length) % items.length;
-    setSlide(nextSlide);
+    if (slide + 1 > items.length) {
+      slideNumber = 0;
+    }
+     else {
+      slideNumber = (slide + 1) % items.length;
+    }
+
+    setSlide(slideNumber);
   };
-  // const changeSlide = () => {
-  //   let slideNumber = 0;
-
-  //   if (slide + 1 > items.length) {
-  //     slideNumber = 0;
-  //   }
-  //    else {
-  //     slideNumber = (slide + 1) % items.length;
-  //   }
-
-  //   setSlide(slideNumber);
-  // };
-
 
   const handleTouchStart = (e) => {
     const touchDown = e.touches[0].clientX;
@@ -71,8 +65,6 @@ const Slider = function ({ width, height, type }) {
     setTouchPosition(null);
   };
 
-const checkButton = items.length > 3
-
   return (
     <div
       style={{ width, height }}
@@ -83,13 +75,13 @@ const checkButton = items.length > 3
       <SliderContext.Provider
         value={{
           changeSlide,
-          slidesCount: items.length%3,
+          slidesCount: items.length,
           slideNumber: slide,
           items
         }}
       >
         <SlidesList />
-        {checkButton? (<DropdownBtn/>):null}
+        <DropdownBtn/>
       </SliderContext.Provider>
     </div>
   );

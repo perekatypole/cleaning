@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import Image from "react-bootstrap/Image";
 import question from "../../images/main/question.svg";
-import DropdownBtn from "../Slider/DropdownBtn";
 import Slider from "../Slider/Slider";
 
 const Services = () => {
