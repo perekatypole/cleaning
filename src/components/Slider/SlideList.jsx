@@ -23,11 +23,10 @@ import { SliderContext } from "./Slider";
 
 export default function SlidesList() {
   const { slideNumber, items, slidesCount } = useContext(SliderContext);
-  const itemsPerPage = 3;
   // Рассчитываем начальный и конечный индексы для отображения элементов
-  const startIndex = slideNumber * itemsPerPage;
-  const endIndex = slideNumber+3;
-  console.log('=', slidesCount,'',items.slice(startIndex, endIndex));
+  const startIndex = slideNumber * 3;
+  const endIndex = (items.length-startIndex+1)>=3? slideNumber+3:items.length;
+  console.log(slidesCount,'=', slideNumber,items.slice(startIndex, endIndex));
   return (
     <div className="slide-list">
       {items.slice(startIndex, endIndex).map((slide, index) => (

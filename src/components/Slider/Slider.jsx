@@ -28,23 +28,18 @@ const Slider = function ({ width, height, type }) {
   }, []);
 
 
-  const changeSlide = (direction = 1) => {
-    const nextSlide = (slide + direction + items.length) % items.length;
-    setSlide(nextSlide);
+  const changeSlide = () => {
+    let slideNumber = 0;
+
+    if (slide + 1 > items.length) {
+      slideNumber = 0;
+    }
+     else {
+      slideNumber = (slide + 1) % items.length;
+    }
+
+    setSlide(slideNumber);
   };
-  // const changeSlide = () => {
-  //   let slideNumber = 0;
-
-  //   if (slide + 1 > items.length) {
-  //     slideNumber = 0;
-  //   }
-  //    else {
-  //     slideNumber = (slide + 1) % items.length;
-  //   }
-
-  //   setSlide(slideNumber);
-  // };
-
 
   const handleTouchStart = (e) => {
     const touchDown = e.touches[0].clientX;
@@ -71,7 +66,8 @@ const Slider = function ({ width, height, type }) {
     setTouchPosition(null);
   };
 
-const checkButton = items.length > 3
+const checkButton = items.length > 3;
+// console.log('-', items, items.length/3, Math.ceil(items.length/3));
 
   return (
     <div
@@ -83,7 +79,7 @@ const checkButton = items.length > 3
       <SliderContext.Provider
         value={{
           changeSlide,
-          slidesCount: items.length%3,
+          slidesCount: Math.ceil(items.length/3),
           slideNumber: slide,
           items
         }}
