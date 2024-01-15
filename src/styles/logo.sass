@@ -38,19 +38,17 @@
     margin-left: 18%
 
 .header-button
-    background-position: 0 0
+    text-align: center
+    position: relative
     margin: 14% 0 0 10%
     padding: 18px 90px
-    background-position: 0
-    background-image: linear-gradient(rgba(239,202,210,0.5),rgba(239,202,210,0.5))
-    background-size: 0 100%
-    background-repeat: no-repeat
-    box-shadow: 2px 2px 3px rgba(214, 131, 149, 0.3)
-    border-radius: 40px
-    color: inherit
+    color: #616161
+    background: linear-gradient(90deg,rgba(255, 192, 192),rgba(248, 240, 198), #c7feb7, #acffd2, #f7feb7, rgba(255, 192, 192))
+    background-size: 400%
+    border-radius: 30px
     font-family: fira-sans
     font-size: 20px
-    transition: background-size 0.6s, transform  0.3s, box-shadow 0.3s
+    z-index: 1
     @media screen and (max-width: 1199px)
         font-size: 16px
     @media screen and (max-width: 991px)
@@ -66,12 +64,36 @@
         font-size: 16px
 
 .header-button:hover
-    box-shadow: 2px 2px 3px rgba(214, 131, 149, 1)
-    background-size: 100% 100%
+    animation: animate 8s linear infinite
+
+@keyframes animate 
+  0% 
+    background-position: 0%
+  100% 
+    background-position: 400%
+
+.header-button:before
+    content: ""
+    position: absolute
+    top: -2%
+    right: -2%
+    bottom: -2%
+    left: -2%
+    z-index: -1
+    background: linear-gradient(90deg,rgba(255, 192, 192),rgba(248, 240, 198), #c7feb7, #acffd2, #f7feb7, rgba(255, 192, 192))
+    background-size: 400%
+    border-radius: 40px
+    opacity: 0
+    transition: .5s
+
+.header-button:hover:before
+    filter: blur(20px)
+    opacity: 1
+    animation: animate 8s linear infinite
+
 .header-button:active
     transform: scale(0.95)
-    background-color: #efcad2
-    box-shadow: none
+    background: #afd1f9
 
         
     

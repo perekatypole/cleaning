@@ -4,7 +4,7 @@ import more from "../../images/main/more.svg";
 
 
 
-// const DropdownBtn = (props) => {
+const DropdownBtn = () => {
 //   const [flag, setFlag] = useState(false);
 //   function useHeandleClick() {
 //     if (!flag) {
@@ -19,7 +19,7 @@ import more from "../../images/main/more.svg";
 //       setFlag(!flag);
 //     }
 //   }
-//   return <Image onClick={useHeandleClick} className="more" src={more} />;
-// };
+  return <Image /*onClick={useHeandleClick}*/ className="more" src={more} />;
+};
 
-// export default DropdownBtn;
+export default DropdownBtn;
