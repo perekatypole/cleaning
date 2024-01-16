@@ -29,10 +29,11 @@ import React from "react";
 import ProductsPrices from "./ProductsPrices";
 
 export default function Slide({ data }) {
-  console.log(data);
   return (
     <div className="slide">
-      <ProductsPrices product={data[0]} price={data[1]} />
+      {data.map((item, index) => (
+        <ProductsPrices key={index} product={item[0]} price={item[1]} />
+      ))}
     </div>
   );
 }
