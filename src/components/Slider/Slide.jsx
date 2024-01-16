@@ -28,10 +28,11 @@
 import React from "react";
 import ProductsPrices from "./ProductsPrices";
 
-export default function Slide({ data: [product, price] }) {
+export default function Slide({ data }) {
+  console.log(data);
   return (
     <div className="slide">
-      <ProductsPrices product={product} price={price} />
+      <ProductsPrices product={data[0]} price={data[1]} />
     </div>
   );
 }

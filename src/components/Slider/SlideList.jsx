@@ -50,12 +50,10 @@ export default function SlidesList() {
   // Рассчитываем начальный и конечный индексы для отображения элементов
   const startIndex = slideNumber * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, items.length);
-
+  // console.log(items.slice(startIndex, endIndex));
   return (
     <div className="slide-list">
-      {[items.slice(startIndex, endIndex)].map((slideData, index) => (
-        <Slide key={index} data={slideData} />
-      ))}
+        <Slide data={items.slice(startIndex, endIndex)} />
     </div>
   );
 }
