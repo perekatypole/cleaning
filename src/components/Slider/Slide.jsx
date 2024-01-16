@@ -1,14 +1,16 @@
-import React from "react";
-import ProductsPrices from "./ProductsPrices";
+// import React from "react";
+// import ProductsPrices from "./ProductsPrices";
 
-
-export default function Slide({ data: { product, price } }) {
-  return (
-    <div className="slide">
-      <ProductsPrices product={product} price={price} />
-    </div>
-  );
-}
+// export default function Slide({ data }) {
+//   console.log(data);
+//   return (
+//     <div className="slide">
+//       {data.map((item, index) => (
+//         <ProductsPrices key={index}  product={item[0]} price={item[1]} />
+//       ))}
+//     </div>
+//   );
+// }
 
 // import React from "react";
 // import ProductsPrices from "./ProductsPrices";
@@ -21,3 +23,15 @@ export default function Slide({ data: { product, price } }) {
 //     </div>
 //   );
 // }
+
+// Slide.jsx
+import React from "react";
+import ProductsPrices from "./ProductsPrices";
+
+export default function Slide({ data: [product, price] }) {
+  return (
+    <div className="slide">
+      <ProductsPrices product={product} price={price} />
+    </div>
+  );
+}

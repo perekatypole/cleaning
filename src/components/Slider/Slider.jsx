@@ -7,35 +7,32 @@ import DropdownBtn from "./DropdownBtn";
 
 export const SliderContext = createContext();
 
+const loadDataByType = (type) => ({
+  office: vars.officeData,
+  repair: vars.repairData,
+  generalCleaning: vars.generalCleaningData,
+  supportCleaning: vars.supportCleaningData,
+  windowCleaning: vars.windowCleaningData,
+  extraService: vars.extraServiceData,
+}[type] || []);
+
 const Slider = function ({ width, height, type }) {
   const [items, setItems] = useState([]);
   const [slide, setSlide] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
 
   useEffect(() => {
-    if (type === "office") {
-      setItems(vars.officeData);
-    }
-    else if(type === "window"){
-        setItems(vars.windowData)
-    }
-    else if(type === "add"){
-      setItems(vars.additionalData)
-    }
-    else{
-      setItems([])
-    }
-  }, []);
+    setItems(loadDataByType(type));
+  }, [type]);
 
-
-  const changeSlide = () => {
+  const changeSlide = (direction = 1) => {
     let slideNumber = 0;
 
-    if (slide + 1 > items.length) {
+    if (slide + 1 > (Math.ceil(items.length/3)-1)) {
       slideNumber = 0;
     }
      else {
-      slideNumber = (slide + 1) % items.length;
+      slideNumber = (slide + 1) % (Math.ceil(items.length/3));
     }
 
     setSlide(slideNumber);
@@ -67,7 +64,6 @@ const Slider = function ({ width, height, type }) {
   };
 
 const checkButton = items.length > 3;
-// console.log('-', items, items.length/3, Math.ceil(items.length/3));
 
   return (
     <div
@@ -79,7 +75,7 @@ const checkButton = items.length > 3;
       <SliderContext.Provider
         value={{
           changeSlide,
-          slidesCount: Math.ceil(items.length/3),
+          slidesCount: Math.ceil(items.length/3)-1,
           slideNumber: slide,
           items
         }}

@@ -24,20 +24,7 @@ const Services = () => {
               Уборка после <br /> ремонта
             </h3>
           </div>
-          <div className="card-main">
-            <div className="card-main-line">
-              <p>Однушка</p>
-              <p>Требуется осмотр</p>
-            </div>
-            <div className="card-main-line">
-              <p>Двушка</p>
-              <p>Требуется осмотр</p>
-            </div>
-            <div className="card-main-line">
-              <p>Трешка</p>
-              <p>Требуется осмотр</p>
-            </div>
-          </div>
+          <Slider type="repair" />
         </div>
         <div className="services-card">
           <Image className="question" src={question} />
@@ -46,52 +33,26 @@ const Services = () => {
               Генеральная <br /> уборка
             </h3>
           </div>
-          <div className="card-main">
-            <div className="card-main-line">
-              <p>Однушка</p>
-              <p>от 4490 руб</p>
-            </div>
-            <div className="card-main-line">
-              <p>Двушка</p>
-              <p>от 5490 руб</p>
-            </div>
-            <div className="card-main-line">
-              <p>Трешка</p>
-              <p>от 5990 руб</p>
-            </div>
-          </div>
+          <Slider type="generalCleaning" />
         </div>
         <div className="services-card">
           <Image className="question" src={question} />
           <div className="card-title">
             <h3>Поддерживающая уборка</h3>
           </div>
-          <div className="card-main">
-            <div className="card-main-line">
-              <p>Однушка</p>
-              <p>от 1990 руб</p>
-            </div>
-            <div className="card-main-line">
-              <p>Двушка</p>
-              <p>от 2490 руб</p>
-            </div>
-            <div className="card-main-line">
-              <p>Трешка</p>
-              <p>от 2990 руб</p>
-            </div>
-          </div>
+          <Slider type="supportCleaning" />
         </div>
         <div className="services-card">
           <div className="card-title">
             <h3>Мытье окон</h3>
           </div>
-          <Slider type={"add"} />
+          <Slider type="windowCleaning" />
         </div>
         <div className="services-card">
           <div className="card-title">
             <h3>Доп услуги</h3>
           </div>
-          <Slider type={"window"} />
+          <Slider type="extraService" />
         </div>
       </div>
     </div>
