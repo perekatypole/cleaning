@@ -7,7 +7,7 @@ import Slider from "../Slider/Slider.jsx";
 export default function ProductCards({item}){
     return (
     <div className="services-card">
-      <Image className="question" src={question} />
+      {productData[item].extraInfo? <Image className="question" src={question} />:null}
         <div className="card-title">
          <h3>{productData[item].name}</h3>
         </div>
