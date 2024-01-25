@@ -5,7 +5,6 @@ import { productData } from "../../variables/variables.js";
 import Slider from "../Slider/Slider.jsx";
 
 export default function ProductCards({item}){
-console.log(item);
     return (
     <div className="services-card">
       <Image className="question" src={question} />

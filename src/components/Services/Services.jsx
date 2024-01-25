@@ -1,6 +1,6 @@
 import { React } from "react";
 import {productData} from "../../variables/variables";
-import ProductCards from "./ProductCards";
+import ProductCards from "./ProductCard";
 
 const Services = () => {
   return(

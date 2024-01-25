@@ -1,20 +1,11 @@
 import React, { useEffect, useState, createContext } from "react";
 import PropTypes from "prop-types";
-import * as vars from "../../variables/variables";
+import {productData} from "../../variables/variables";
 
 import SlidesList from "./SlideList";
 import DropdownBtn from "./DropdownBtn";
 
 export const SliderContext = createContext();
-
-const loadDataByType = (type) => ({
-  office: vars.officeData,
-  repair: vars.repairData,
-  generalCleaning: vars.generalCleaningData,
-  supportCleaning: vars.supportCleaningData,
-  windowCleaning: vars.windowCleaningData,
-  extraService: vars.extraServiceData,
-}[type] || []);
 
 const Slider = function ({ width, height, type }) {
   const [items, setItems] = useState([]);
@@ -22,7 +13,7 @@ const Slider = function ({ width, height, type }) {
   const [touchPosition, setTouchPosition] = useState(null);
 
   useEffect(() => {
-    setItems(loadDataByType(type));
+    setItems(productData[type].data);
   }, [type]);
 
   const changeSlide = (direction = 1) => {
